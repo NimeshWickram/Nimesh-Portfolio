@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import {
-  SiReact, SiNextdotjs, SiJavascript, SiTypescript,
-  SiTailwindcss, SiHtml5, SiCss3, SiSass,
+import { 
+  SiReact, SiNextdotjs, SiJavascript, SiTypescript, 
+  SiTailwindcss, SiHtml5, SiCss3, SiSass, 
   SiNodedotjs, SiMongodb, SiFlutter, SiPhp,
   SiLinkedin, SiGithub
 } from "react-icons/si";
@@ -90,7 +90,7 @@ function App() {
   return (
     <div className={darkMode ? "dark" : ""}>
       <div className="bg-gray-50 dark:bg-black text-gray-800 dark:text-white min-h-screen transition-colors duration-300">
-
+        
         {/* Navbar */}
         <nav className="flex justify-between items-center px-6 py-4 shadow-md sticky top-0 bg-white/80 dark:bg-black/80 backdrop-blur-sm z-50">
           <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Nimesh</h1>
@@ -100,10 +100,11 @@ function App() {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`font-medium transition-colors duration-300 ${activeSection === item.toLowerCase()
-                    ? "text-blue-600 dark:text-blue-400"
-                    : "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
-                    }`}
+                  className={`font-medium transition-colors duration-300 ${
+                    activeSection === item.toLowerCase()
+                      ? "text-blue-600 dark:text-blue-400"
+                      : "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
+                  }`}
                 >
                   {item}
                 </button>
@@ -126,7 +127,7 @@ function App() {
             transition={{ duration: 0.8 }}
             className="flex-1 text-center md:text-left mb-8 md:mb-0 md:pr-8"
           >
-            <motion.h1
+            <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
@@ -137,7 +138,7 @@ function App() {
                 Undergraduate & Full Stack Developer.
               </span>
             </motion.h1>
-
+            
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -146,7 +147,7 @@ function App() {
             >
               Open to Work | React • Java • MongoDB • Node.js • Flutter
             </motion.p>
-
+            
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -157,7 +158,7 @@ function App() {
                 <span className="mr-2">📍</span>
                 <span>Colombo, Sri Lanka</span>
               </div>
-
+              
               <div className="flex gap-3">
                 <motion.a
                   href="https://linkedin.com/in/nimesh-wickramasinghe"
@@ -168,7 +169,7 @@ function App() {
                   <SiLinkedin className="mr-1.5" />
                   LinkedIn
                 </motion.a>
-
+                
                 <motion.a
                   href="#"
                   whileHover={{ scale: 1.05 }}
@@ -181,7 +182,7 @@ function App() {
               </div>
             </motion.div>
           </motion.div>
-
+          
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -189,9 +190,9 @@ function App() {
             className="relative"
           >
             <div className="w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
-              <img
-                src={require("./assets/profile.jpg")}
-                alt="Nimesh Profile"
+              <img 
+                src={require("./assets/profile.jpg")} 
+                alt="Nimesh Profile" 
                 className="w-full h-full object-cover"
               />
             </div>
@@ -216,8 +217,8 @@ function App() {
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
             </motion.div>
-
-            <motion.div
+            
+            <motion.div 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -233,8 +234,8 @@ function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1, duration: 0.5 }}
-                    whileHover={{
-                      scale: 1.05,
+                    whileHover={{ 
+                      scale: 1.05, 
                       y: -10,
                       boxShadow: `0 20px 25px -5px ${tech.color}40, 0 10px 10px -5px ${tech.color}20`
                     }}
@@ -266,7 +267,7 @@ function App() {
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
             </motion.div>
-
+            
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.map((project, index) => (
                 <motion.div
@@ -283,14 +284,14 @@ function App() {
                       <div className="text-3xl mr-3">{project.image}</div>
                       <h3 className="text-xl font-bold">{project.title}</h3>
                     </div>
-
+                    
                     <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
                       {project.description}
                     </p>
-
+                    
                     <div className="flex flex-wrap gap-1 mb-4">
                       {project.technologies.map((tech, techIndex) => (
-                        <span
+                        <span 
                           key={techIndex}
                           className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs rounded-full"
                         >
@@ -298,7 +299,7 @@ function App() {
                         </span>
                       ))}
                     </div>
-
+                    
                     <div className="flex gap-2">
                       <motion.a
                         href={project.liveDemo}
@@ -342,7 +343,7 @@ function App() {
                 Let's Connect and Build Something Great 🚀
               </p>
             </motion.div>
-
+            
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -350,49 +351,68 @@ function App() {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="bg-white dark:bg-gray-900 rounded-xl shadow-2xl p-6"
             >
-              <div className="flex flex-col items-center gap-6">
-                <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-                  <motion.a
-                    href="https://linkedin.com/in/nimesh-wickramasinghe"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex flex-col items-center px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium shadow-lg hover:shadow-xl transition-shadow"
-                  >
-                    <SiLinkedin className="text-3xl mb-2" />
-                    <span>LinkedIn</span>
-                  </motion.a>
+              <form className="space-y-4">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Your Name"
+                      className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-sm"
+                    />
+                  </div>
 
-                  <motion.a
-                    href="#"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex flex-col items-center px-6 py-4 bg-gradient-to-r from-gray-800 to-black text-white rounded-lg font-medium shadow-lg hover:shadow-xl transition-shadow dark:from-gray-700 dark:to-gray-900"
-                  >
-                    <SiGithub className="text-3xl mb-2" />
-                    <span>GitHub</span>
-                  </motion.a>
-
-                  <motion.a
-                    href="mailto:nimeshwickramasinghelk@gmail.com"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex flex-col items-center px-6 py-4 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-lg font-medium shadow-lg hover:shadow-xl transition-shadow"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mb-2" viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                    </svg>
-                    <span>Email</span>
-                  </motion.a>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      placeholder="your.email@example.com"
+                      className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-sm"
+                    />
+                  </div>
                 </div>
 
-                <div className="mt-6 text-center">
-                  <p className="text-gray-600 dark:text-gray-300">
-                    Or email me directly at:
-                    <a href="mailto:nimeshwickramasinghelk@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline ml-2">
-                      nimeshwickramasinfghelk@gmail.com
-                    </a>
-                  </p>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    Message
+                  </label>
+                  <textarea
+                    rows="4"
+                    placeholder="Tell me about your project..."
+                    className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none text-sm"
+                  ></textarea>
+                </div>
+
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-all text-sm"
+                >
+                  Send Message
+                </motion.button>
+              </form>
+
+              <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+                <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+                  <div className="flex items-center">
+                    <SiLinkedin className="text-xl mr-2 text-blue-600" />
+                    <div>
+                      <h3 className="font-semibold text-sm">LinkedIn</h3>
+                      <p className="text-gray-600 dark:text-gray-400 text-xs">Connect with me</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center">
+                    <SiGithub className="text-xl mr-2" />
+                    <div>
+                      <h3 className="font-semibold text-sm">GitHub</h3>
+                      <p className="text-gray-600 dark:text-gray-400 text-xs">View my projects</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -422,7 +442,7 @@ function App() {
                 );
               })}
             </div>
-
+            
             <p className="text-gray-400 text-sm">
               © {new Date().getFullYear()} Nimesh. All rights reserved.
             </p>
