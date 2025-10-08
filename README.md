@@ -6,6 +6,17 @@ Welcome to my personal portfolio website! This is a modern, responsive portfolio
 
 [https://nimeshwickram.github.io/Nimesh-Portfolio](https://nimeshwickram.github.io/Nimesh-Portfolio)
 
+## 🚀 Deployment
+
+This project is configured for deployment to Vercel. The root directory is correctly set to the project root where package.json is located.
+
+### Vercel Deployment Settings
+
+- Build Command: `npm run build`
+- Output Directory: `build`
+- Install Command: `npm install`
+- Framework Preset: Create React App
+
 ## 📋 Features
 
 - **Responsive Design**: Works on all device sizes
