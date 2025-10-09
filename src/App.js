@@ -170,7 +170,7 @@ function App() {
                 </motion.a>
 
                 <motion.a
-                  href="#"
+                  href="https://github.com/NimeshWickram"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="flex items-center px-5 py-2.5 bg-gradient-to-r from-gray-800 to-black text-white rounded-lg font-medium shadow-lg hover:shadow-xl transition-shadow dark:from-gray-700 dark:to-gray-900 text-sm"
@@ -195,9 +195,7 @@ function App() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-2.5 py-1 rounded-full font-bold text-xs">
-              👨‍💻
-            </div>
+
           </motion.div>
         </section>
 
