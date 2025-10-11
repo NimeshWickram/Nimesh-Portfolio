@@ -24,11 +24,10 @@ function App() {
     { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
     { name: "HTML", icon: SiHtml5, color: "#E34F26" },
     { name: "CSS", icon: SiCss3, color: "#1572B6" },
-    { name: "SCSS", icon: SiCss3, color: "#CC6699" },
     { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
     { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
     { name: "Flutter", icon: SiFlutter, color: "#02569B" },
-    { name: "Java", icon: SiJavascript, color: "#007396" }, // Using JavaScript icon as placeholder
+    { name: "Java", icon: SiJavascript, color: "#007396" },
     { name: "PHP", icon: SiPhp, color: "#777BB4" }
   ];
 
@@ -94,11 +93,11 @@ function App() {
   return (
     <div className={darkMode ? "dark" : ""}>
       <div className="bg-gray-50 dark:bg-black text-gray-800 dark:text-white min-h-screen transition-colors duration-300">
-        <Navbar 
-          darkMode={darkMode} 
-          setDarkMode={setDarkMode} 
-          activeSection={activeSection} 
-          scrollToSection={scrollToSection} 
+        <Navbar
+          darkMode={darkMode}
+          setDarkMode={setDarkMode}
+          activeSection={activeSection}
+          scrollToSection={scrollToSection}
         />
         <HeroSection />
         <TechStack techStack={techStack} />

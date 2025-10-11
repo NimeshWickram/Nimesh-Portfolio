@@ -29,7 +29,7 @@ const HeroSection = () => {
                     transition={{ delay: 0.4, duration: 0.8 }}
                     className="text-lg md:text-xl mb-8 text-gray-600 dark:text-gray-300"
                 >
-                    Open to Work | React • Java • MongoDB • Node.js • Flutter
+                    Open to Work | React • Java  • Node.js • Spring Boot
                 </motion.p>
 
                 <motion.div
