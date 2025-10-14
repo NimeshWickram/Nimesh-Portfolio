@@ -38,8 +38,8 @@ function App() {
       description: "QR code based event management system with real-time check-ins and analytics dashboard.",
       technologies: ["React", "NestJS", "MongoDB", "QR Code"],
       image: "📊",
-      liveDemo: "#",
-      sourceCode: "#"
+      liveDemo: "https://event-checkin-system-1-ioiepkfpo-nimeshwickrams-projects.vercel.app/",
+      sourceCode: "https://github.com/NimeshWickram/event-checkin-system"
     },
     {
       title: "eShop Website",

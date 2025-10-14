@@ -56,6 +56,8 @@ const ProjectCard = ({ project, index }) => {
                 <div className="flex gap-2">
                     <motion.a
                         href={project.liveDemo}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="flex-1 text-center px-3 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-md font-medium text-sm"
@@ -64,6 +66,8 @@ const ProjectCard = ({ project, index }) => {
                     </motion.a>
                     <motion.a
                         href={project.sourceCode}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="flex-1 text-center px-3 py-2 bg-gray-800 dark:bg-gray-700 text-white rounded-md font-medium text-sm"
