@@ -18,30 +18,8 @@ const Navbar = ({ darkMode, setDarkMode, activeSection, scrollToSection }) => {
         <nav className="flex justify-between items-center px-6 py-4 shadow-md sticky top-0 bg-white/80 dark:bg-black/80 backdrop-blur-sm z-50">
             <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Nimesh.Dev</h1>
             
-            {/* Right side buttons group */}
+            {/* Mobile menu button with animation */}
             <div className="flex items-center space-x-4">
-                {/* Theme toggle button - visible on all screens */}
-                <motion.button
-                    onClick={() => setDarkMode(!darkMode)}
-                    className="px-3 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white flex items-center text-sm"
-                    aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                >
-                    {darkMode ? (
-                        <>
-                            <FaSun className="mr-1" />
-                            Light
-                        </>
-                    ) : (
-                        <>
-                            <FaMoon className="mr-1" />
-                            Dark
-                        </>
-                    )}
-                </motion.button>
-                
-                {/* Mobile menu button with animation */}
                 <motion.button 
                     className="md:hidden z-50 text-gray-800 dark:text-white"
                     onClick={toggleMenu}
@@ -71,6 +49,26 @@ const Navbar = ({ darkMode, setDarkMode, activeSection, scrollToSection }) => {
                         {item}
                     </button>
                 ))}
+                {/* Theme toggle button - visible on desktop screens after Contact */}
+                <motion.button
+                    onClick={() => setDarkMode(!darkMode)}
+                    className="px-3 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white flex items-center text-sm"
+                    aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                >
+                    {darkMode ? (
+                        <>
+                            <FaSun className="mr-1" />
+                            Light
+                        </>
+                    ) : (
+                        <>
+                            <FaMoon className="mr-1" />
+                            Dark
+                        </>
+                    )}
+                </motion.button>
             </div>
             
             {/* Mobile menu overlay */}
@@ -116,6 +114,29 @@ const Navbar = ({ darkMode, setDarkMode, activeSection, scrollToSection }) => {
                             {item}
                         </motion.button>
                     ))}
+                    {/* Theme toggle button - visible on mobile menu */}
+                    <motion.button
+                        onClick={() => {
+                            setDarkMode(!darkMode);
+                            closeMenu();
+                        }}
+                        className="px-3 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white flex items-center text-sm justify-center"
+                        aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                    >
+                        {darkMode ? (
+                            <>
+                                <FaSun className="mr-1" />
+                                Light Mode
+                            </>
+                        ) : (
+                            <>
+                                <FaMoon className="mr-1" />
+                                Dark Mode
+                            </>
+                        )}
+                    </motion.button>
                 </div>
             </div>
         </nav>
