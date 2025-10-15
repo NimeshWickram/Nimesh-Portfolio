@@ -36,7 +36,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-16 px-4 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-black dark:to-black">
+    <section id="contact" className="py-16 px-4 bg-[#f3f4f6] dark:bg-black">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

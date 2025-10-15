@@ -10,6 +10,7 @@ import TechStack from "./components/TechStack";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
+import Milestones from "./components/Milestones";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -62,7 +63,7 @@ function App() {
   // Handle scroll to detect active section
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "tech", "projects", "contact"];
+      const sections = ["home", "tech", "projects", "milestones", "contact"];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -102,6 +103,7 @@ function App() {
         <HeroSection />
         <TechStack techStack={techStack} />
         <ProjectsSection projects={projects} />
+        <Milestones />
         <ContactSection />
         <Footer />
       </div>
