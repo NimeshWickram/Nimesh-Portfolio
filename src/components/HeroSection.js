@@ -50,7 +50,7 @@ const HeroSection = () => {
                         transition={{ delay: 0.8, duration: 0.8 }}
                     >
                         <a
-                            href="/assets/Nimesh_Wickramasinghe_Resume.pdf"
+                            href="\assets\Nimesh Wickramasinghe-Software Engineer(Internship)-resume.pdf"
                             download="Nimesh_Wickramasinghe_Resume.pdf"
                             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium shadow-lg hover:shadow-xl transition-shadow"
                         >

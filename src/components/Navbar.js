@@ -18,23 +18,6 @@ const Navbar = ({ darkMode, setDarkMode, activeSection, scrollToSection }) => {
         <nav className="flex justify-between items-center px-6 py-4 shadow-md sticky top-0 bg-white/80 dark:bg-black/80 backdrop-blur-sm z-50">
             <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Nimesh.Dev</h1>
             
-            {/* Mobile menu button with animation */}
-            <div className="flex items-center space-x-4">
-                <motion.button 
-                    className="md:hidden z-50 text-gray-800 dark:text-white"
-                    onClick={toggleMenu}
-                    aria-label={menuOpen ? "Close menu" : "Open menu"}
-                    whileTap={{ scale: 0.9 }}
-                >
-                    <motion.div
-                        animate={{ rotate: menuOpen ? 90 : 0 }}
-                        transition={{ duration: 0.3 }}
-                    >
-                        {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-                    </motion.div>
-                </motion.button>
-            </div>
-            
             {/* Desktop menu */}
             <div className="hidden md:flex items-center space-x-6">
                 {["Home", "Tech", "Projects", "Milestones", "Contact"].map((item) => (
@@ -71,14 +54,29 @@ const Navbar = ({ darkMode, setDarkMode, activeSection, scrollToSection }) => {
                 </motion.button>
             </div>
             
+            {/* Mobile menu button with glass modern look */}
+            <motion.button 
+                className="md:hidden z-50 text-gray-800 dark:text-white bg-white/30 dark:bg-black/30 backdrop-blur-lg rounded-xl p-2 shadow-lg"
+                onClick={toggleMenu}
+                aria-label={menuOpen ? "Close menu" : "Open menu"}
+                whileTap={{ scale: 0.9 }}
+            >
+                <motion.div
+                    animate={{ rotate: menuOpen ? 90 : 0 }}
+                    transition={{ duration: 0.3 }}
+                >
+                    {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+                </motion.div>
+            </motion.button>
+            
             {/* Mobile menu overlay */}
             {menuOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden" onClick={closeMenu}></div>
             )}
             
-            {/* Mobile menu panel from right side */}
+            {/* Mobile menu panel from right side with glass modern look */}
             <div 
-                className={`fixed top-0 right-0 h-full w-64 bg-white dark:bg-gray-900 shadow-xl z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
+                className={`fixed top-0 right-0 h-full w-64 bg-white/80 dark:bg-black/80 backdrop-blur-xl shadow-xl z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
                     menuOpen ? "translate-x-0" : "translate-x-full"
                 }`}
             >
@@ -114,29 +112,6 @@ const Navbar = ({ darkMode, setDarkMode, activeSection, scrollToSection }) => {
                             {item}
                         </motion.button>
                     ))}
-                    {/* Theme toggle button - visible on mobile menu */}
-                    <motion.button
-                        onClick={() => {
-                            setDarkMode(!darkMode);
-                            closeMenu();
-                        }}
-                        className="px-3 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white flex items-center text-sm justify-center"
-                        aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                    >
-                        {darkMode ? (
-                            <>
-                                <FaSun className="mr-1" />
-                                Light Mode
-                            </>
-                        ) : (
-                            <>
-                                <FaMoon className="mr-1" />
-                                Dark Mode
-                            </>
-                        )}
-                    </motion.button>
                 </div>
             </div>
         </nav>
